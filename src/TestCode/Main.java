@@ -1,8 +1,6 @@
 package TestCode;
 
-import Algorithm.BFS;
-import Algorithm.DFS;
-import Algorithm.DFSID;
+import Algorithm.BFS_DFS_DFSID.DFSID;
 import Model.State;
 
 public class Main {

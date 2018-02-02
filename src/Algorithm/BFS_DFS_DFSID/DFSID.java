@@ -1,4 +1,4 @@
-package Algorithm;
+package Algorithm.BFS_DFS_DFSID;
 
 import Model.State;
 

@@ -1,20 +1,11 @@
-package Algorithm;
+package Algorithm.BFS_DFS_DFSID;
 
 import Model.State;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class DFS extends GenericSearch {
-
-    int Max_depth;
-    State state;
-
-    public DFS(State state) {
-        Max_depth = 1000000;
-        this.state = state;
-        Search(state,Max_depth);
-    }
+public class DFSBD extends GenericSearch {
 
     @Override
     public ArrayList<State> pendMethod(ArrayList<State> open, ArrayList<State> neighbour) {
@@ -28,6 +19,5 @@ public class DFS extends GenericSearch {
         if(Arrays.deepEquals(goal,temp.matrix)) return true;
         else return false;
     }
-
 
 }
