@@ -11,7 +11,7 @@ import java.util.Iterator;
 public abstract class GenericSearch implements SearchType{
     ArrayList<State> Open = new ArrayList<State>();
     ArrayList<State> Closed = new ArrayList<State>();
-
+    boolean Flag = true;
     public boolean Search(State start,int Max_depth) {
         Open.add(start);
         while(!Open.isEmpty()){
@@ -24,11 +24,13 @@ public abstract class GenericSearch implements SearchType{
                 return false;
             }
             ArrayList<State> Neighbour = new ArrayList<State>(new NextGen().Next(temp));
+            if (Neighbour.isEmpty() && temp.depth==Max_depth) Flag=false;
+            else Flag = true;
             Neighbour.removeAll(Open);
             Neighbour.removeAll(Closed);
             Open = pendMethod(Open,Neighbour);
         }
-        return true;
+        return Flag;
     }
 
     protected void SolStackTrace(State state) {
