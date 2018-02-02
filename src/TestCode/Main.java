@@ -1,0 +1,21 @@
+package TestCode;
+
+import Algorithm.BFS;
+import Algorithm.DFS;
+import Algorithm.DFSID;
+import Model.State;
+
+public class Main {
+    public static void main(String[] args) {
+
+        int[][] mat = {{1,2,3},{4,8,0},{7,6,5}};
+        State start = new State(null,0,mat);
+
+        //DFS dfs = new DFS(start);
+
+        //BFS bfs = new BFS(start);
+
+        DFSID dfsid = new DFSID(start);
+
+    }
+}
