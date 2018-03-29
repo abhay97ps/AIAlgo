@@ -1,6 +1,7 @@
 package TestCode;
 
 import Algorithm.BFS_DFS_DFSID.DFSID;
+import Heuristics.Distance;
 import Model.State;
 
 public class Main {
@@ -13,7 +14,11 @@ public class Main {
 
         //BFS bfs = new BFS(start);
 
-        DFSID dfsid = new DFSID(start);
+        //DFSID dfsid = new DFSID(start);
+
+        Distance d = new Distance();
+        int x = d.Man_Dis(start);
+        System.out.println(x);
 
     }
 }
